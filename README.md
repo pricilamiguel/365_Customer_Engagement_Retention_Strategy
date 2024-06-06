@@ -22,7 +22,7 @@ We used MySQL to extract relevant data in the form of CSV files and Tableau to c
 As data analysts, our objective is to identify potential improvements and recommendations to help elevate the platform based off of data that was collected from the 365 Data Science website between January 1, 2022 – October 31, 2022, which include career track, course, and student engagement data.
 
 > [!NOTE]
-> To find a detailed breakdown of the database used for this analysis, refer to the [365 Customer Engagement Database Breakdown](Full_SQL_Querries/signup_converstion_rate_query.sql) document.
+> To find a detailed breakdown of the database used for this analysis, refer to the [365 Customer Engagement Database Breakdown](365_Customer_Engagement_Database_Breakdown.pdf) document.
 
 We will achieve this by addressing the following key questions through cohort analysis:
 - How engaged are the students inside the platform, and how can this metric be improved?
@@ -224,19 +224,19 @@ FROM course_ratings;
 > These snippets of code do not represent the complete queries used to create the dashboards. They serve as examples of specific sections used for certain measures or dimensions. Please refer to links below for the full queries used.
 
 > [!NOTE]
-> Full Student Engagement SQL query [here](Full_SQL_Querries/signup_converstion_rate_query.sql)
+> Full Student Engagement SQL query [here](full_sql_querries/student_engagement_query.sql)
 
 > [!NOTE]
-> Full Student Learning SQL query [here](Full_SQL_Querries/signup_converstion_rate_query.sql)
+> Full Student Learning SQL query [here](full_sql_querries/student_learning_query.sql)
 
 > [!NOTE]
-> Full Student Certificates SQL query [here](Full_SQL_Querries/signup_converstion_rate_query.sql)
+> Full Student Certificates SQL query [here](full_sql_querries/student_certificates_query.sql)
 
 > [!NOTE]
-> Full Courses Engagement SQL query [here](Full_SQL_Querries/signup_converstion_rate_query.sql)
+> Full Courses Engagement SQL query [here](full_sql_querries/courses_engagement_query.sql)
 
 > [!NOTE]
-> Full Course Ratings SQL query [here](Full_SQL_Querries/signup_converstion_rate_query.sql)
+> Full Course Ratings SQL query [here](full_sql_querries/course_ratings_query.sql)
 
 The ‘Engagement and Onboarding’ page focuses on tracking activity and onboarding trends over time. The first line chart displays the number of engaged users over time, while the bottom chart shows the percentage of onboarded students relative to their registration date. This page will give the option to select between daily, monthly, or yearly views to analyze data at different levels of granularity.
 
@@ -283,10 +283,10 @@ WHERE student_id IN (SELECT DISTINCT student_id FROM student_engagement);
 > These snippets of code do not represent the complete queries used to create the dashboards. They serve as examples of specific sections used for certain measures or dimensions. Please refer to links below for the full queries used.
 
 > [!NOTE]
-> Full Student Engagement SQL query [here](Full_SQL_Querries/signup_converstion_rate_query.sql)
+> Full Student Engagement SQL query [here](full_sql_querries/student_engagement_query.sql)
 
 > [!NOTE]
-> Full Student Onboarding SQL query [here](Full_SQL_Querries/signup_converstion_rate_query.sql)
+> Full Student Onboarding SQL query [here](full_sql_querries/student_onboarding_query.sql)
 
 On the ‘Cohort Engagement’ page, the bottom chart features a cohort analysis table, where each row represents a cohort of students onboarded in the same month. The columns represent the months since onboarding, offering insight into the retention of newcomers over time. The chart above illustrates the fluctuation in cohort size over successive periods, corresponding to the months selected in the cohort analysis table. It plots retention rates on the y-axis against periods on the x-axis, with the curve starting at 100% to signify the initial cohort size.
 
@@ -329,7 +329,7 @@ To create the retention curve chart, we’ll utilize the ‘student_id’ and �
 > These snippets of code do not represent the complete queries used to create the dashboards. They serve as examples of specific sections used for certain measures or dimensions. Please refer to links below for the full queries used.
 
 > [!NOTE]
-> Full Student Engagement SQL query [here](Full_SQL_Querries/signup_converstion_rate_query.sql)
+> Full Student Engagement SQL query [here](full_sql_querries/student_engagement_query.sql)
 
 On the ‘Exams and Certificates’ page, the first chart is a horizontal bar chart showing the number of exams taken that month. Within each bar, the left section indicates the percentage of exams not passed, while the right section would show the opposite. The second half of the page offers toggling between two charts. The first is a vertical bar chart displaying the number of certificates issued by month. The second is a funnel visualization presented as a horizonal bar chart, with a filter option to select the career track.
 
@@ -510,13 +510,13 @@ To filter this chart by the career track type, we’ll obtain the track IDs for 
 > These snippets of code do not represent the complete queries used to create the dashboards. They serve as examples of specific sections used for certain measures or dimensions. Please refer to links below for the full queries used.
 
 > [!NOTE]
-> Full Student Exam Attempts SQL query [here](Full_SQL_Querries/signup_converstion_rate_query.sql)
+> Full Student Exam Attempts SQL query [here](full_sql_querries/student_exam_attempts_query.sql)
 
 > [!NOTE]
-> Full Student Certificates SQL query [here](Full_SQL_Querries/signup_converstion_rate_query.sql)
+> Full Student Certificates SQL query [here](full_sql_querries/student_certificates_query.sql)
 
 > [!NOTE]
-> Full Career Track Funnel SQL query [here](Full_SQL_Querries/signup_converstion_rate_query.sql)
+> Full Career Track Funnel SQL query [here](full_sql_querries/career_track_funnel_query.sql)
 
 The final page on the dashboard is the ‘Student Learning’ page. The left bar chart displays the minutes watched by students each month, along with a line graph showing the average minutes watched each month. The right side of the page will feature two combo charts. One will display the number of students segmented into buckets and their conversion rate. The other will show the number of students segmented into buckets and their average subscription duration counted in days.
 
@@ -713,13 +713,13 @@ FROM buckets_distribution;
 > These snippets of code do not represent the complete queries used to create the dashboards. They serve as examples of specific sections used for certain measures or dimensions. Please refer to links below for the full queries used.
 
 > [!NOTE]
-> Full Student Learning SQL query [here](Full_SQL_Querries/signup_converstion_rate_query.sql)
+> Full Student Learning SQL query [here](full_sql_querries/student_learning_query.sql)
 
 > [!NOTE]
-> Full Student Buckets F2P SQL query [here](Full_SQL_Querries/signup_converstion_rate_query.sql)
+> Full Student Buckets F2P SQL query [here](full_sql_querries/student_buckets_f2p_query.sql)
 
 > [!NOTE]
-> Full Student Buckets Subscription Duration SQL query [here](Full_SQL_Querries/signup_converstion_rate_query.sql)
+> Full Student Buckets Subscription Duration SQL query [here](full_sql_querries/student_buckets_sub_duration_query.sql)
 
 ## Data Analysis and Insights
 
@@ -768,7 +768,7 @@ Reflecting on the key questions we aim to address:
 By breaking down each question, we can pinpoint any existing issues and limitations, thereby enabling us to formulate recommendations aimed at improving engagement and retention rates on the platform.
 
 > [!NOTE]
-> To find the corresponding data findings, refer to the 'Interpreting the Data' section in the [365 Customer Engagement Analysis Report](Full_SQL_Querries/signup_converstion_rate_query.sql)
+> To find the corresponding data findings, refer to the 'Interpreting the Data' section in the [365 Customer Engagement Analysis Report](365_Customer_Engagement_Analysis_Report.pdf)
 
 ## Applying Insights: Recommendations
 
