@@ -54,7 +54,7 @@ In August 2022, the platform hosted a 3-day marketing event where all content is
 
 The first page of our story-based [dashboard](https://public.tableau.com/app/profile/pricila.miguel/viz/365CustomerEngagement/Overview), the ‘Overview’ page, provides a comprehensive view of student engagement, which includes three key performance indicators (KPIs): the number of engaged students on the platform, the average number of minutes watched per student, and the total number of certificates issued. The bar chart displays either the top or bottom five courses based on total overall minutes watched, average minutes watched per student, or its completion rate. The second chart, a donut chart, displays the average platform rating at its center, surrounded by fractions representing the distribution of one though five-star course ratings.
 
-<img width="1344" alt="365_Customer_Engagement_Overview_Page" src="https://github.com/pricilamiguel/365_Customer_Engagement_Retention_Strategy/assets/131540339/d7975147-1214-4a99-b07b-7a615ee0c240">
+<img width="1327" alt="365_Customer_Engagement_Overview_Page" src="https://github.com/pricilamiguel/365_Customer_Engagement_Retention_Strategy/assets/131540339/16037b1d-c574-4f38-907d-b6da6589d757">
 
 To create the first KPI, number of engaged students, we need to identify those students who have engaged on the platform.
 ```sql
